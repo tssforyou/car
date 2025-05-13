@@ -13,14 +13,15 @@ st.set_page_config(
     layout="wide"
 )
 st.markdown("""
-<link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
 <style>
 html, body, [class*="css"], h1, h2, h3, h4, h5, h6,
-.stMarkdown, .stHeader, .stSubheader, .stText, .stTitle {
-    font-family: 'Cal+Sans', cursive, sans-serif !important;
+.stMarkdown, .stHeader, .stSubheader, .stText, .stTitle, .stButton > button {
+    font-family: 'El Messiri', sans-serif !important;
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 
