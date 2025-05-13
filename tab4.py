@@ -137,7 +137,7 @@ fuel_map = {
 # === Odometer Checker ===
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\Sanzhar\A Projects\Data Science\Project\22613data.csv")
+    df = pd.read_csv("22613data.csv")
     df.columns = df.columns.str.strip()
     return df
 
