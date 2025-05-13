@@ -13,11 +13,11 @@ st.set_page_config(
     layout="wide"
 )
 st.markdown("""
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
 <style>
 html, body, [class*="css"], h1, h2, h3, h4, h5, h6,
-.stMarkdown, .stHeader, .stSubheader, .stText, .stTitle {
-    font-family: 'Lobster', cursive, sans-serif !important;
+.stMarkdown, .stHeader, .stSubheader, .stText, .stTitle, .stButton > button {
+    font-family: 'El Messiri', sans-serif !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -28,11 +28,11 @@ html, body, [class*="css"], h1, h2, h3, h4, h5, h6,
 theme = st.radio("🌗 Тема интерфейса", ["☀️ Светлая", "🌙 Тёмная"], horizontal=True)
 
 if theme == "☀️ Светлая":
-    background_color = "#f5f0e6"; text_color = "#1f1f1f"
-    button_color = "#e0dbd1"; hover_color = "#d1cfc7"
+    background_color = "#FFFFFF"; text_color = "#1f1f1f"
+    button_color = "#CFDFF5"; hover_color = "#CFDFF5"
 else:
     background_color = "#1E1E1E"; text_color = "#FFFDFD"
-    button_color = "#717070"; hover_color = "#444444"
+    button_color = "#717070"; hover_color = "#717070"
 
 # === Dynamic CSS ===
 st.markdown(f"""
@@ -82,6 +82,20 @@ input, textarea, select {{
 </style>
 """, unsafe_allow_html=True)
 
+st.markdown(f"""
+<style>
+input[type="number"],
+input[type="text"],
+select,
+div[data-baseweb="select"] {{
+    background-color: {button_color} !important;
+    color: #000000 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    padding: 8px !important;
+}}
+</style>
+""", unsafe_allow_html=True)
 def show_card(title, content):
     st.markdown(f"""
     <div class='card'>
